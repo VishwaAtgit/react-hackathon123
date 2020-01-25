@@ -1,0 +1,18 @@
+[{"id":1,
+    "name":"Taj",
+    "rating":5,
+    "number":"9807890678",
+    "noOfRooms":100,
+    "address":"Electronic city",
+    "state":"Karnataka",
+    "city":"Bangalore"
+    },
+    {"id":2,
+    "name":"Leela Palace",
+    "rating":4,
+    "number":"9807890008",
+    "noOfRooms":108,
+    "address":"Electronic city",
+    "state":"Karnataka",
+    "city":"Bangalore"
+    }]
