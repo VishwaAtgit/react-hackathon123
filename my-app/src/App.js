@@ -4,11 +4,13 @@ import Home from './components/HomeComponent';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import HotelViewComponent from './components/HotelViewComponent';
+import HotelListComponent from './components/HotelListComponent.js';
 function App() {
   return (
     <div className="App">      
       <Home/>
       <HotelViewComponent />
+      <HotelListComponent />
     </div>
   );
 }
