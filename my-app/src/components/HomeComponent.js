@@ -10,15 +10,21 @@ class Home extends React.Component {
   
     this.search = this.search.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:""};
+    this.state = {
+        hotelDetails:hotelDetails, 
+        locationDetails: location,
+        hotelName:""
+        };
     }
    search(){
        this.setState({ hotelId:""});
-       console.log("sdfsdf");
-
-    //    this.setState({ hotelId:""});
-       const filteredData = this.state.hotelDetails.filter((element)=>element.state===this.state.hotelName);
-       console.log("sdfsdf",filteredData);
+     
+        if(this.state.hotelName !==""){
+            const filteredData = this.state.hotelDetails.filter((element)=>element.state===this.state.hotelName);
+        }
+    
+      
+      
        
        console.log(this.state.hotelName);
 
@@ -34,7 +40,7 @@ class Home extends React.Component {
        
         <form action="#" method="post" novalidate="novalidate" className="search-block">
             <div className="row">
-                <div className="col-lg-12">
+                <div className="col-lg-12 col-md-12 col-sm-12">
                     <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-12 p-0">
                             <input type="text" className="form-control search-slt" placeholder="Search by hotel name" />
