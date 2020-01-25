@@ -5,7 +5,8 @@
     "noOfRooms":100,
     "address":"Electronic city",
     "state":"Karnataka",
-    "city":"Bangalore"
+    "city":"Bangalore",
+    "hotelType": "AC"
     },
     {"id":2,
     "name":"Leela Palace",
@@ -14,5 +15,6 @@
     "noOfRooms":108,
     "address":"Electronic city",
     "state":"Karnataka",
-    "city":"Bangalore"
+    "city":"Bangalore",
+    "hotelType": "AC | Non AC"
     }]

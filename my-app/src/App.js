@@ -6,8 +6,7 @@ import './App.css';
 import HotelViewComponent from './components/HotelViewComponent';
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App">      
       <Home/>
       <HotelViewComponent />
     </div>

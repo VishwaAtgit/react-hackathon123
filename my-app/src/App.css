@@ -86,3 +86,8 @@ body{
   background: #fff;
   color:#007bff;
 }
+.ratings{
+  padding: 5px 10px;
+  background:#007bff;
+  margin:5px;
+}
