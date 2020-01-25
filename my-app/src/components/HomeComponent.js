@@ -7,13 +7,18 @@ class Home extends React.Component {
     constructor(props){
     super(props);  
     this.search = this.search.bind(this);
-    this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:""};
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:"", hotelName:""};
     }
    search(){
-       this.setState({ hotelId:""});
-       console.log("sdfsdf");
+       
+       console.log(this.state.hotelName);
    }
+   handleChange = (event) => {     
+     this.setState({ hotelName: event.target.value });
+  };
   render() {
+    const {  value } = this.state;
     return (
         <>
         <div className="container">
@@ -26,7 +31,7 @@ class Home extends React.Component {
                             <input type="text" className="form-control search-slt" placeholder="Search by hotel name" />
                         </div>
                          <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select className="form-control search-slt" id="exampleFormControlSelect1">
+                            <select className="form-control search-slt" id="exampleFormControlSelect1"  onChange={this.handleChange} value={value}>
                                 <option>Select State</option>
                                 {
                                     this.state.locationDetails.map(function(item, i){
