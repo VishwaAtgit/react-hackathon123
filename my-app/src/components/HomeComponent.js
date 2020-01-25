@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Search extends React.Component {
+class Home extends React.Component {
   render() {
     return (
         <>
@@ -48,4 +48,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default Home;
