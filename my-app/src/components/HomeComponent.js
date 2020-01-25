@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import location from '../assets/jsons/location.json';
 
 class Home extends React.Component {
+
   render() {
     return (
         <>
