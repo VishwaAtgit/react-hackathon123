@@ -8,11 +8,11 @@ class Home extends React.Component {
     super(props);  
     this.search = this.search.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:"", hotelName:""};
+    this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:""};
     }
    search(){
-       
-       console.log(this.state.hotelName);
+       this.setState({ hotelId:""});
+       console.log("sdfsdf");
    }
    handleChange = (event) => {     
      this.setState({ hotelName: event.target.value });
