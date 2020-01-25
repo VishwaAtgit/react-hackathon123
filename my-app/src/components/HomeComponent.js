@@ -1,19 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import hotelDetails from '../assets/jsons/hotelDetails.json';
 import location from '../assets/jsons/location.json';
+import hotelDetails from '../assets/jsons/hotelDetails.json';
 
 class Home extends React.Component {
     constructor(props){
     super(props);  
+    this.state = {data:hotelDetails, locationDetails: location};
+  
     this.search = this.search.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:""};
     }
    search(){
        this.setState({ hotelId:""});
        console.log("sdfsdf");
+
+    //    this.setState({ hotelId:""});
+       const filteredData = this.state.hotelDetails.filter((element)=>element.state===this.state.hotelName);
+       console.log("sdfsdf",filteredData);
+       
+       console.log(this.state.hotelName);
+
    }
+   handleChange = (event) => {     
+     this.setState({ hotelName: event.target.value });
+  };
   render() {
+    const {  value } = this.state;
     return (
         <>
         <div className="container">
@@ -26,7 +40,7 @@ class Home extends React.Component {
                             <input type="text" className="form-control search-slt" placeholder="Search by hotel name" />
                         </div>
                          <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <select className="form-control search-slt" id="exampleFormControlSelect1">
+                            <select className="form-control search-slt" id="exampleFormControlSelect1"  onChange={this.handleChange} value={value}>
                                 <option>Select State</option>
                                 {
                                     this.state.locationDetails.map(function(item, i){
