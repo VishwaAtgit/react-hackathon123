@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import hotelDetails from '../assets/jsons/hotelDetails.json';
 import location from '../assets/jsons/location.json';
+import hotelDetails from '../assets/jsons/hotelDetails.json';
 
 class Home extends React.Component {
     constructor(props){
     super(props);  
+    this.state = {data:hotelDetails, locationDetails: location};
+  
     this.search = this.search.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {hotelDetails:hotelDetails, locationDetails: location, hotelId:""};
@@ -13,6 +15,13 @@ class Home extends React.Component {
    search(){
        this.setState({ hotelId:""});
        console.log("sdfsdf");
+
+    //    this.setState({ hotelId:""});
+       const filteredData = this.state.hotelDetails.filter((element)=>element.state===this.state.hotelName);
+       console.log("sdfsdf",filteredData);
+       
+       console.log(this.state.hotelName);
+
    }
    handleChange = (event) => {     
      this.setState({ hotelName: event.target.value });
