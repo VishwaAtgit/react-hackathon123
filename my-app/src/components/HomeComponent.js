@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import hotelDetails from '../assets/jsons/hotelDetails.json';
 
 class Home extends React.Component {
+    constructor(props){
+    super(props);
+    console.log(hotelDetails[0].id);
+    }
+   
   render() {
     return (
         <>
@@ -11,7 +17,7 @@ class Home extends React.Component {
                 <div className="col-lg-12">
                     <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-12 p-0">
-                            <input type="text" className="form-control search-slt" />
+                            <input type="text" className="form-control search-slt" placeholder="Search by hotel name" />
                         </div>
                          <div className="col-lg-3 col-md-3 col-sm-12 p-0">
                             <select className="form-control search-slt" id="exampleFormControlSelect1">
