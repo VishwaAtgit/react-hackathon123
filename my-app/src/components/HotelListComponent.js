@@ -1,37 +1,49 @@
-<<<<<<< HEAD
-import React,{useState, useEffect} from 'react';
-import hotelDetails from '../assets/jsons/hotelDetails.json';
-import { render } from '@testing-library/react';
-import ReactDOM from 'react-dom';
-=======
 import React from 'react';
-// import ReactDOM from 'react-dom';
->>>>>>> 873fde2589247c649a3e67b1f9ca506e0bee99db
+import hotelDetails from '../assets/jsons/hotelDetails.json';
+class HotelListComponent extends React.Component {
+    constructor(props){
+        super(props);  
+        this.state = {data:hotelDetails}
+        }
 
-const HotelList = () => {
-  const [data,setData]=useState();
-  const data=
-  hotelDetails.map((num)=><li>{num}</li>)
-  const d = JSON.parse(data);
-
-
-return(
-  // <div className="container">
-  <div>{d.id}</div>
-  // </div>
-
-  // <table>
-  //   <thead>
-  //     <th>hotel id</th>
-  //     </thead>
-  //     <tbody>
-  //       <tr>
-  //         <td>{data.id}</td>
-  //       </tr>
-  //     </tbody>
-  // </table>
-)
+        render() {
+            return (
+                <>
+                <div className="container p-0">
+                        <div>
+                         <table className="table table-light table-bordered">
+                            <tr >
+                                <th>Hotel Id</th>
+                                <th>HotelName</th>
+                                <th>Address</th>
+                                <th>Hotel Rating</th>
+                                <th>Phone Number</th>
+                                <th>Actions</th>
+                            </tr>
+                            {
+                                this.state.data.map(function(item, i) {
+                                    return (
+                                        <tr>
+                                            <td>{item.id}</td>
+                                            <td>{item.name} </td>
+                                            <td>{item.address}, {item.state}, {item.city}</td>
+                                            <td>{item.rating}</td>
+                                            <td>{item.number}</td>
+                                            <td><button className="btn btn-xlarge">Details</button>
+                                            <button className="btn btn-xlarge">Add Room</button></td>
+                                        </tr>
+                                    )
+                                } )
+                            }
+                            
+                        </table>
+                        </div>
+                      
+                </div>
+               
+                </>
+            )
+          }
 }
 
-
-export default HotelList;
+export default HotelListComponent

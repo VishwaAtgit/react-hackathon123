@@ -17,4 +17,25 @@
     "state":"Karnataka",
     "city":"Bangalore",
     "hotelType": "AC | Non AC"
-    }]
+    },
+    {"id":3,
+        "name":"Leela Palace",
+        "rating":4,
+        "number":"9807890008",
+        "noOfRooms":108,
+        "address":"Electronic city",
+        "state":"Maharashtra",
+        "city":"Pune",
+        "hotelType": "AC | Non AC"
+        },
+        {"id":4,
+            "name":"Leela Palace",
+            "rating":4,
+            "number":"9807890008",
+            "noOfRooms":108,
+            "address":"Electronic city",
+            "state":"Maharashtra",
+            "city":"Mumbai",
+            "hotelType": "AC | Non AC"
+            }
+        ]
