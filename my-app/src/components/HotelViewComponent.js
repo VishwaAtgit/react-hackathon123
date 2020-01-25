@@ -8,8 +8,6 @@ class HotelViewComponent extends React.Component {
         }
   render() {
     return (
-        <>
-<<<<<<< HEAD
         <div className="container p-0">       
         <div className="HotelListView">
         <div className="col-lg-4 col-md-4 col-sm-12 p-0">
@@ -28,7 +26,6 @@ class HotelViewComponent extends React.Component {
             
             </div>
         </div>
-=======
         <div className="container p-0">
         {
             this.state.data.map(function(item, i){
@@ -54,11 +51,8 @@ class HotelViewComponent extends React.Component {
                 )
             })
         }       
-        
->>>>>>> 38f5cbcf5c6913b7f2c69dcae1715eb8c2900780
         </div>
-       
-        </>
+        </div>
     )
   }
 }
